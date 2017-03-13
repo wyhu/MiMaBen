@@ -38,7 +38,7 @@
     self.contentTextV.text = _model.shuoMing;
     self.count.enabled = NO;
     [self initNav];
-    
+    //你最近还好吗
     
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFC) name:UITextFieldTextDidChangeNotification object:nil];
