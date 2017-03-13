@@ -39,7 +39,7 @@
     self.count.enabled = NO;
     [self initNav];
     
-    //大家好
+    //大家好修改了一下
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFC) name:UITextFieldTextDidChangeNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textFC) name:UITextViewTextDidChangeNotification object:nil];
