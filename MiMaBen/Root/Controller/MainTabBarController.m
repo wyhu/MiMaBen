@@ -28,34 +28,20 @@
     SettingViewController *setVC = [[SettingViewController alloc] init];
     
     MainNavigationController *setNav = [[MainNavigationController alloc] initWithRootViewController:setVC];
-    
 
-    
-    
-    
     self.viewControllers = @[homeNav,setNav];
-    
-    
+
     NSArray *titleArr = @[@"首页",@"设置"];
-    
-    
+
     for (int i = 0; i < titleArr.count; i++) {
         
         UITabBarItem *tabBarItem = self.tabBar.items[i];
         
         tabBarItem.title = titleArr[i];
-        
-        
+
     }
     
-    
-    
 }
-
-
-
-
-
 
 
 - (void)didReceiveMemoryWarning {
