@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingViewController">
+            <connections>
+                <outlet property="textF" destination="5tL-t5-wrf" id="Yyv-uR-zNJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你身份证后四位是什么❓" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U4P-8e-aCF">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="YGf-fg-8kd"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5tL-t5-wrf">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="1R0-Jy-7fy"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ntC-rt-W17">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="NlL-UL-Lyh"/>
+                        <constraint firstAttribute="height" constant="30" id="fDc-hL-0hR"/>
+                    </constraints>
+                    <state key="normal" title="确定"/>
+                    <connections>
+                        <action selector="sureBtnA:" destination="-1" eventType="touchUpInside" id="oi4-KY-YnL"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="设置密保问题" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wAd-6k-aXG">
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="nxg-xk-RYa"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wAd-6k-aXG" secondAttribute="trailing" constant="167" id="0AM-EJ-Jy7"/>
+                <constraint firstItem="ntC-rt-W17" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="1Pv-cI-vDb"/>
+                <constraint firstItem="5tL-t5-wrf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="D1u-rw-zNk"/>
+                <constraint firstItem="U4P-8e-aCF" firstAttribute="top" secondItem="wAd-6k-aXG" secondAttribute="bottom" constant="32" id="Ln2-Bh-5pF"/>
+                <constraint firstItem="wAd-6k-aXG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="QWM-Se-E8f"/>
+                <constraint firstAttribute="trailing" secondItem="5tL-t5-wrf" secondAttribute="trailing" constant="150" id="W5U-bp-mI2"/>
+                <constraint firstItem="ntC-rt-W17" firstAttribute="top" secondItem="5tL-t5-wrf" secondAttribute="bottom" constant="33" id="ZQL-GU-H9E"/>
+                <constraint firstItem="U4P-8e-aCF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="34" id="aB0-x9-viq"/>
+                <constraint firstAttribute="trailing" secondItem="U4P-8e-aCF" secondAttribute="trailing" constant="115" id="gk0-ja-h1V"/>
+                <constraint firstItem="5tL-t5-wrf" firstAttribute="top" secondItem="U4P-8e-aCF" secondAttribute="bottom" constant="30" id="oYl-Cm-crm"/>
+                <constraint firstItem="wAd-6k-aXG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="74" id="tr8-sC-4hZ"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
