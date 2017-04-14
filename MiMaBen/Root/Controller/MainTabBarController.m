@@ -16,8 +16,7 @@
 
 @implementation MainTabBarController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
+- (void)viewDidLoad { 
     // Do any additional setup after loading the view.
     
     
