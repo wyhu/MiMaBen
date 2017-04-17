@@ -24,6 +24,7 @@
 		6F184BB51DB0E7660040BD18 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F184BB31DB0E7660040BD18 /* SettingViewController.m */; };
 		6F184BB61DB0E7660040BD18 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F184BB41DB0E7660040BD18 /* SettingViewController.xib */; };
 		6F210FD21D59DCB0006BB832 /* key_count.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F210FD11D59DCB0006BB832 /* key_count.plist */; };
+		6F3BABA91EA458E00039C08D /* self.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F3BABA81EA458E00039C08D /* self.m */; };
 		6FC58D3E1E729DFC00E55D2A /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC58D3D1E729DFC00E55D2A /* libc++.tbd */; };
 		6FC58D401E729E0700E55D2A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC58D3F1E729E0700E55D2A /* libz.tbd */; };
 		6FC58D421E729E1200E55D2A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6FC58D411E729E1200E55D2A /* SystemConfiguration.framework */; };
@@ -63,6 +64,8 @@
 		6F184BB31DB0E7660040BD18 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		6F184BB41DB0E7660040BD18 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
 		6F210FD11D59DCB0006BB832 /* key_count.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = key_count.plist; sourceTree = "<group>"; };
+		6F3BABA71EA458E00039C08D /* self.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = self.h; sourceTree = "<group>"; };
+		6F3BABA81EA458E00039C08D /* self.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = self.m; sourceTree = "<group>"; };
 		6FC58D3D1E729DFC00E55D2A /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		6FC58D3F1E729E0700E55D2A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		6FC58D411E729E1200E55D2A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -208,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				6F184BB11DB0E7460040BD18 /* Controller */,
+				6F3BABA61EA458BF0039C08D /* View */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -221,6 +225,16 @@
 			);
 			path = Controller;
 			sourceTree = "<group>";
+		};
+		6F3BABA61EA458BF0039C08D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6F3BABA71EA458E00039C08D /* self.h */,
+				6F3BABA81EA458E00039C08D /* self.m */,
+			);
+			name = View;
+			path = MiMaBen/Setting/View;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -358,6 +372,7 @@
 				6F06A1E51D543AB90047336F /* MainViewController.m in Sources */,
 				6F184BB51DB0E7660040BD18 /* SettingViewController.m in Sources */,
 				6F184BA21DB0B7E60040BD18 /* MiMaDetailViewController.m in Sources */,
+				6F3BABA91EA458E00039C08D /* self.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
