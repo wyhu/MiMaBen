@@ -10,6 +10,8 @@
 #import "MainNavigationController.h"
 #import "MainViewController.h"
 #import "SettingViewController.h"
+//设置swift
+
 @interface MainTabBarController ()
 
 @end
@@ -19,7 +21,6 @@
 - (void)viewDidLoad { 
     // Do any additional setup after loading the view.
     
-    
     MainViewController *homeVC = [[MainViewController alloc] init];
     
     MainNavigationController *homeNav = [[MainNavigationController alloc] initWithRootViewController:homeVC];
@@ -28,15 +29,9 @@
     
     MainNavigationController *setNav = [[MainNavigationController alloc] initWithRootViewController:setVC];
     
-
-    
-    
-    
     self.viewControllers = @[homeNav,setNav];
     
-    
     NSArray *titleArr = @[@"首页",@"设置"];
-    
     
     for (int i = 0; i < titleArr.count; i++) {
         
