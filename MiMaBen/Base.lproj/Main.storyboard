@@ -1,103 +1,11 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
     </dependencies>
-    <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="loginVC" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="welcome" translatesAutoresizingMaskIntoConstraints="NO" id="nzV-Lg-Rth"/>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W3S-5W-yba">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="CEm-O8-IqZ"/>
-                                </constraints>
-                                <state key="normal" title="密码登陆">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="clickPasswordAction:message:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ay6-DW-MWc"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYC-ce-Y7t">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="UIw-Cc-c63"/>
-                                </constraints>
-                                <state key="normal" title="指纹登陆">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="touchIDAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kcs-ap-od0"/>
-                                </connections>
-                            </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C4B-50-mCr">
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="w36-qn-JvF"/>
-                                </constraints>
-                                <state key="normal" title="重置密码">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="reSetPassword:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ltn-NZ-Sba"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="nzV-Lg-Rth" secondAttribute="trailing" id="60B-c9-lav"/>
-                            <constraint firstItem="W3S-5W-yba" firstAttribute="top" secondItem="MYC-ce-Y7t" secondAttribute="bottom" constant="20" id="A20-fF-Dfj"/>
-                            <constraint firstAttribute="trailing" secondItem="MYC-ce-Y7t" secondAttribute="trailing" constant="126" id="DDh-KD-1ng"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="nzV-Lg-Rth" secondAttribute="bottom" id="Hun-LO-bSS"/>
-                            <constraint firstItem="C4B-50-mCr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="126" id="UTJ-0R-f9E"/>
-                            <constraint firstItem="nzV-Lg-Rth" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wa7-B5-S2o"/>
-                            <constraint firstItem="MYC-ce-Y7t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="126" id="XL5-xq-gcS"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W3S-5W-yba" secondAttribute="bottom" constant="92" id="cy3-Jp-dpp"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="C4B-50-mCr" secondAttribute="bottom" constant="41" id="djR-MM-fIF"/>
-                            <constraint firstAttribute="trailing" secondItem="C4B-50-mCr" secondAttribute="trailing" constant="126" id="kJj-35-n8j"/>
-                            <constraint firstItem="W3S-5W-yba" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="126" id="pRC-nh-zrR"/>
-                            <constraint firstItem="nzV-Lg-Rth" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tIt-Sq-HXH"/>
-                            <constraint firstAttribute="trailing" secondItem="W3S-5W-yba" secondAttribute="trailing" constant="126" id="tdf-DY-Bmg"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="reSetBtn" destination="C4B-50-mCr" id="anl-IM-RNz"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="280" y="293"/>
-        </scene>
-        <!--Main View Controller-->
-        <scene sceneID="lOa-dT-ht0">
-            <objects>
-                <viewController id="Nmc-9m-ZXQ" customClass="MainViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="za5-Iu-hbF"/>
-                        <viewControllerLayoutGuide type="bottom" id="6PJ-vD-YPz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ux6-cQ-eHj">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="g9K-46-Gwo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="92" y="949"/>
-        </scene>
-    </scenes>
-    <resources>
-        <image name="welcome" width="1080" height="1920"/>
-    </resources>
+    <scenes/>
 </document>

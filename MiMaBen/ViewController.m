@@ -13,8 +13,6 @@
 #import <LocalAuthentication/LocalAuthentication.h>
 
 
-#define AppkeyWindow [UIApplication sharedApplication].keyWindow
-
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *reSetBtn;
@@ -30,15 +28,37 @@
     
     _reSetBtn.hidden = NO;
     
-    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES) objectAtIndex:0];
     
-    NSLog(@"%@",path);
+    
+    
+    UIImageView *bgImagView = [[UIImageView alloc] init];
+    [self.view addSubview:bgImagView];
+    bgImagView.image = [UIImage imageNamed:@"bg"];
+    [bgImagView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.edges.mas_equalTo(UIEdgeInsetsMake(0, 0, 0, 0));
+    }];
+    
+    
+    
+    //指纹登陆
+    UIButton *zwBtn = [[UIButton alloc] init];
+    [zwBtn setImage:[UIImage imageNamed:@"指纹"] forState:0];
+    [self.view addSubview:zwBtn];
+    [zwBtn addTarget:self action:@selector(touchIDAction:) forControlEvents:UIControlEventTouchDown];
+    
+    [zwBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+       
+        make.centerX.equalTo(self.view);
+        make.bottom.mas_equalTo(self.view.mas_bottom).mas_offset(-70);
+        
+    }];
     
     
     
 }
 
-
+#pragma mark 密码登陆
 - (IBAction)clickPasswordAction:(UIButton *)sender message:(NSString *)mess{
     
     NSString *password = [[NSUserDefaults standardUserDefaults] objectForKey:@"password"];
@@ -80,14 +100,12 @@
             UITextField *field1 = passAlert.textFields[0];
             
             UITextField *field2 = passAlert.textFields[1];
-
             
             if ([field1.text isEqualToString:field2.text] && field1.text.length > 0) {
                 
                 [[NSUserDefaults standardUserDefaults] setObject:field2.text forKey:@"password"];
                 
                 [self clickPasswordAction:nil message:nil];
-                
                 
                 
             }else{
@@ -101,15 +119,8 @@
 
             if ([field1.text isEqual:password]) {
                 
-                //密码正确
-
-                                
-//                [self presentViewController:[[MainViewController alloc] init] animated:YES completion:nil];
                 
-                
-                
-                AppkeyWindow.rootViewController=[[MainTabBarController alloc] init];
-                
+                AppKeyWindow.rootViewController=[[MainTabBarController alloc] init];
                 
                 
             }else{
@@ -158,7 +169,7 @@
     
 }
 
-
+//指纹登陆
 - (IBAction)touchIDAction:(UIButton *)sender {
     
     //iOS8.0后才支持指纹识别接口
@@ -175,12 +186,10 @@
 - (void)evaluateAuthenticate
 {
     
-    __weak typeof(self) weakSelf = self;
-    
     //创建LAContext
     LAContext* context = [[LAContext alloc] init];
     NSError* error = nil;
-    NSString* result = @"请验证已有指纹";
+    NSString* result = @"请验证已有指纹！";
     
     //首先使用canEvaluatePolicy 判断设备支持状态
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
@@ -192,7 +201,7 @@
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     
                     //切换主控制器
-                  AppkeyWindow.rootViewController = [[MainTabBarController alloc] init];
+                  AppKeyWindow.rootViewController = [[MainTabBarController alloc] init];
                 }];
 
                 
@@ -300,10 +309,7 @@
 
 - (IBAction)reSetPassword:(UIButton *)sender {
     
-    
-    
-    
-    
+
     UIAlertController *aletr = [UIAlertController alertControllerWithTitle:@"你身份证后四位是什么❓" message:@"" preferredStyle:UIAlertControllerStyleAlert];
     
     

@@ -9,7 +9,11 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "MainTabBarController.h"
-#import <KSCrash/KSCrashInstallationStandard.h>
+#import "MainNavigationController.h"
+//首页
+#import "MainViewController.h"
+//设置
+#import "SettingViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,19 +25,25 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+//    
+//    MainViewController *homeVC = [[MainViewController alloc] init];
+//    MainNavigationController *homeNav = [[MainNavigationController alloc] initWithRootViewController:homeVC];
+//    
+//    SettingViewController *setVC = [[SettingViewController alloc] init];
+//    MainNavigationController *setNav = [[MainNavigationController alloc] initWithRootViewController:setVC];
+//    
+//    MainTabBarController *mainTab = [[MainTabBarController alloc] init];
+//    [mainTab addChildViewController:homeNav];
+//    [mainTab addChildViewController:setNav];
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    self.window.rootViewController = [storyboard instantiateViewControllerWithIdentifier:@"loginVC"];
+//    self.window.rootViewController = mainTab;
+//    [self.window makeKeyAndVisible];
+    
+    ViewController *VC = [[ViewController alloc] init];
+    self.window.rootViewController = VC;
     [self.window makeKeyAndVisible];
-    
-    
-    
-    KSCrashInstallationStandard* installation = [KSCrashInstallationStandard sharedInstance];
-    installation.url = [NSURL URLWithString:@"https://collector.bughd.com/kscrash?key=fc63a4fa3b51cf989b986ea072daeda2"];
-    [installation install];
-    [installation sendAllReportsWithCompletion:nil];
-    
     
     
     

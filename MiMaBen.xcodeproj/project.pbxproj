@@ -20,7 +20,6 @@
 		6F184BA21DB0B7E60040BD18 /* MiMaDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F184BA01DB0B7E60040BD18 /* MiMaDetailViewController.m */; };
 		6F184BA31DB0B7E60040BD18 /* MiMaDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F184BA11DB0B7E60040BD18 /* MiMaDetailViewController.xib */; };
 		6F184BA91DB0BF900040BD18 /* CountModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F184BA81DB0BF900040BD18 /* CountModel.m */; };
-		6F184BAF1DB0E5340040BD18 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F184BAE1DB0E5340040BD18 /* Launch Screen.storyboard */; };
 		6F184BB51DB0E7660040BD18 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F184BB31DB0E7660040BD18 /* SettingViewController.m */; };
 		6F184BB61DB0E7660040BD18 /* SettingViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F184BB41DB0E7660040BD18 /* SettingViewController.xib */; };
 		6F210FD21D59DCB0006BB832 /* key_count.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F210FD11D59DCB0006BB832 /* key_count.plist */; };
@@ -59,7 +58,6 @@
 		6F184BA51DB0BE3D0040BD18 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		6F184BA71DB0BF900040BD18 /* CountModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountModel.h; sourceTree = "<group>"; };
 		6F184BA81DB0BF900040BD18 /* CountModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountModel.m; sourceTree = "<group>"; };
-		6F184BAE1DB0E5340040BD18 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6F184BB21DB0E7660040BD18 /* SettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		6F184BB31DB0E7660040BD18 /* SettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		6F184BB41DB0E7660040BD18 /* SettingViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingViewController.xib; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 				6F06A1CD1D5439640047336F /* AppDelegate.m */,
 				6F06A1D21D5439640047336F /* Main.storyboard */,
 				6F06A1D51D5439640047336F /* Assets.xcassets */,
-				6F184BAE1DB0E5340040BD18 /* Launch Screen.storyboard */,
 				6F06A1C91D5439640047336F /* Supporting Files */,
 			);
 			path = MiMaBen;
@@ -270,7 +267,7 @@
 				TargetAttributes = {
 					6F06A1C51D5439640047336F = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = SCAK8U2H2B;
+						DevelopmentTeam = 4ZC4CJK778;
 						LastSwiftMigration = 0820;
 					};
 				};
@@ -302,7 +299,6 @@
 				6F184BB61DB0E7660040BD18 /* SettingViewController.xib in Resources */,
 				6F06A1D61D5439640047336F /* Assets.xcassets in Resources */,
 				6F210FD21D59DCB0006BB832 /* key_count.plist in Resources */,
-				6F184BAF1DB0E5340040BD18 /* Launch Screen.storyboard in Resources */,
 				6F06A1D41D5439640047336F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,7 +318,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7DCB3C3A0C4829D822A8C27D /* [CP] Embed Pods Frameworks */ = {
@@ -481,7 +477,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = SCAK8U2H2B;
+				DEVELOPMENT_TEAM = 4ZC4CJK778;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MiMaBen/PrefixHeader.pch";
 				INFOPLIST_FILE = MiMaBen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -502,7 +498,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = SCAK8U2H2B;
+				DEVELOPMENT_TEAM = 4ZC4CJK778;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/MiMaBen/PrefixHeader.pch";
 				INFOPLIST_FILE = MiMaBen/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
